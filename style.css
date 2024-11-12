@@ -1,0 +1,199 @@
+/* Estilo global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo de amor */
+.love-background {
+  background: linear-gradient(to bottom, #ffe6e6, #ffcccc);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  font-family: 'Great Vibes', cursive;
+  color: #b22222;
+  padding: 20px;
+}
+
+/* Encabezado */
+header {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/* Sección del carrusel */
+.carousel-container {
+  width: 80%;
+  max-width: 900px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilo para la sección de la lluvia de imágenes */
+#image-rain {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  overflow: hidden;
+}
+
+/* Imágenes que caen */
+.image-rain {
+  position: absolute;
+  width: 50px; /* Tamaño de las imágenes */
+  height: 50px;
+  background-size: cover; /* Asegura que la imagen ocupe todo el tamaño del contenedor */
+  animation: fall 2s infinite linear; /* Animación de caída */
+  opacity: 0;
+  animation-timing-function: ease-in;
+}
+
+/* Animación para las imágenes que caen */
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh); /* Empieza desde arriba */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh); /* Termina en la parte inferior */
+    opacity: 0;
+  }
+}
+
+/* Sección de cuenta regresiva */
+#countdown {
+  margin-top: 50px;
+}
+
+#countdown h2 {
+  font-size: 1.8rem;
+}
+
+#timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 2rem;
+}
+
+#timer div {
+  padding: 10px;
+  background-color: rgba(255, 105, 180, 0.8);
+  border-radius: 10px;
+}
+/* Estilos para el contenedor del carrusel */
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100%; /* Ancho total del carrusel */
+  height: 300px; /* Ajusta la altura según prefieras */
+  position: relative;
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Estilos del contenedor del carrusel */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    height: 300px; /* Ajusta la altura del carrusel */
+    position: relative;
+}
+
+/* Ocultar todas las imágenes del carrusel por defecto */
+.carousel-image {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Mantiene la proporción original de las imágenes */
+}
+
+/* Muestra solo la imagen activa */
+.carousel-image.active {
+    display: block;
+}
+
+/* Pie de página */
+footer {
+  margin-top: 50px;
+  color: #fff;
+  background-color: #b22222;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Media Queries para móvil */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  #flowers {
+    height: 200px;
+  }
+
+  .flower {
+    width: 50px;
+    height: 50px;
+  }
+
+  #timer {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  #flowers {
+    height: 150px;
+  }
+
+  .flower {
+    width: 40px;
+    height: 40px;
+  }
+
+  #timer {
+    font-size: 1.2rem;
+  }
+}
